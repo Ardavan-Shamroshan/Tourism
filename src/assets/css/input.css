@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* @layer utilities {
+    @variants rtl {
+        .number-fa {
+            -moz-font-feature-settings: "ss02";
+            -webkit-font-feature-settings: "ss02";
+            font-feature-setting: "ss02";
+        }
+    }
+} */
+
+@layer base {
+  /* IRANSans */
+  @font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../src/assets/fonts/IRANSans/IRANSansWeb_Bold.woff")
+        format("woff"),
+      url("../src/assets/fonts/IRANSans/IRANSansWeb_Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../src/assets/fonts/IRANSans/IRANSansWeb.woff") format("woff"),
+      url("../src/assets/fonts/IRANSans/IRANSansWeb.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../src/assets/fonts/IRANSans/IRANSansWeb_Light.woff")
+        format("woff"),
+      url("../src/assets/fonts/IRANSans/IRANSansWeb_Light.woff2")
+        format("woff2");
+  }
+}
+
+@layer components {
+  .title-color {
+    @apply text-gray-700 dark:text-gray-400;
+  }
+
+  .border-mate {
+    @apply border-gray-300;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .hover-transition {
+    @apply transition-all duration-300 ease-in;
+  }
+
+  .top-swiper-container .top-swiper-next,
+  .top-swiper-container .top-swiper-prev {
+    @apply w-10 h-10 rounded-2xl bg-white bg-opacity-90 backdrop-blur-sm hidden sm:flex;
+  }
+
+  .top-swiper-container .top-swiper-next {
+    @apply -right-3;
+  }
+
+  .top-swiper-container .top-swiper-prev {
+    @apply -left-3;
+  }
+  .top-swiper-container .top-swiper-next::after, .top-swiper-container .top-swiper-prev::after {
+    @apply text-base font-bold title-color;
+  }
+}
+
+body {
+  @apply font-iransans;
+}

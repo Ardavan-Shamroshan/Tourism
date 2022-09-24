@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- tailwindcss output -->
+  <link href="../dist/output.css" rel="stylesheet" />
+  <!-- swiper css -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="h-14 w-full bg-white border border-mate-b shadow-xl">
+    <section class="container h-full flex flex-row-reverse justify-between items-center">
+      <!-- navbar menu -->
+      <div>
+        <!-- hamburger -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 cursor-pointer title-color sm:hidden" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <!-- menu -->
+        <ul class="hidden list-none sm:flex sm:flex-row-reverse items-center gap-4">
+          <!-- home -->
+          <li><a href="#" class="title-color text-sm font-bold hover:text-gray-500 transition-all duration-100">خانه</a>
+          </li>
+          <!-- domestic tours  -->
+          <li class="relative" x-data="{ open: false }" x-on:click.away="open=false">
+            <div
+              class="flex items-center gap-1 title-color text-sm font-bold hover:text-gray-500 transition-all duration-100 cursor-pointer"
+              x-on:click="open=!open">
+              <span>تور های داخلی</span>
+              <!-- chevron-down svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 hover-transition" x-bind:class="{'rotate-180' : open}">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+
+            <!-- dropdown -->
+            <ul
+              class="flex flex-col absolute right-0 top-8 bg-white border border-mate rounded-lg shadow list-none w-40 z-10"
+              x-show="open" x-transition x-cloak>
+              <li class=><a href="#"
+                  class="flex flex-row-reverse p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">تور
+                  کیش</a>
+              </li>
+              <li class="relative group"><a href="#"
+                  class="flex flex-row-reverse items-center justify-between p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">
+                  تور کوهنوردی
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-3 h-3" >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                  </span></a>
+                <!-- tour dropdown -->
+                <ul
+                  class="hidden flex-col absolute right-full mr-1 top-2.5 bg-white border border-mate rounded-lg shadow list-none w-28 z-10 overflow-hidden group-hover:flex hover-transition">
+                  <li>
+                    <a href="#"
+                      class="flex flex-row-reverse p-2 text-xs font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100 overflow-hidden">رشته
+                      کوه البرز</a>
+                  </li>
+
+                  <li>
+                    <a href="#"
+                      class="flex flex-row-reverse p-2 text-xs font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100 overflow-hidden">رشته
+                      کوه زاگرس</a>
+                  </li>
+
+                  <li>
+                    <a href="#"
+                      class="flex flex-row-reverse p-2 text-xs font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100 overflow-hidden">دماوند</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li><a href="#"
+                  class="flex flex-row-reverse p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">تور
+                  قشم</a>
+              </li>
+              <li><a href="#"
+                  class="flex flex-row-reverse p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">تور
+                  کویر</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- foreign tours -->
+          <li class="relative" x-data="{ openF: false }" x-on:click.away="openF=false">
+            <div
+              class="flex items-center gap-1 title-color text-sm font-bold hover:text-gray-500 transition-all duration-100 cursor-pointer"
+              x-on:click="openF=!openF">
+              <span>تور های خارجی</span>
+              <!-- chevron-down svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 hover-transition" x-bind:class="{'rotate-180' : openF}" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            <!-- dropdown -->
+            <ul
+              class="flex flex-col absolute right-0 top-8 bg-white border border-mate rounded-lg shadow list-none w-40 z-10"
+              x-show="openF" x-transition x-cloak>
+              <li class=><a href="#"
+                  class="flex flex-row-reverse p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">تور
+                  آنتالیا</a></li>
+              <li class=><a href="#"
+                  class="flex flex-row-reverse items-center justify-between p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">
+                  تور جام جهانی قطر
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-3 h-3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                  </span></a></li>
+              <li class=><a href="#"
+                  class="flex flex-row-reverse p-2 text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover-transition duration-100">تور
+                  استانبول</a></li>
+              <li class=><a href="#" </li>
+            </ul>
+
+          </li>
+          <!-- magazine -->
+          <li><a href="#" class="title-color text-sm font-bold hover:text-gray-500 transition-all duration-100">مجله</a>
+          </li>
+          <!-- honors -->
+          <li><a href="#"
+              class="title-color text-sm font-bold hover:text-gray-500 transition-all duration-100">افتخارات</a></li>
+        </ul>
+      </div>
+      <!-- dark mode, direction, avatar -->
+      <div class="flex items-center gap-4">
+        <!-- avatar -->
+        <a href="#">
+          <img src="assets/images/avatar.png" alt="avatar.png" class="w-8 h-8 rounded-full border border-indigo-500" />
+        </a>
+
+        <!-- direction -->
+        <div class="w-10 h-10 rounded-full flex-center hover:shadow-lg cursor-pointer hover-transition overflow-hidden">
+          <img src="assets/images/rtl.png" alt="rtl.png" class="w-8 h-6 rounded-full" />
+        </div>
+
+        <!-- dark mode -->
+        <div class="w-10 h-10 rounded-full flex-center hover:shadow-lg cursor-pointer hover-transition overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="w-6 h-6 title-color">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- main -->
+  <main class="pt-4">
+    <div class="container grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <!-- swiper slider -->
+      <div class="relative w-full pt-md sm:col-span-2">
+        <div class="absolute inset-0 top-swiper-container">
+          <div class="w-full swiper top-swiper rounded-2xl">
+            <div class="swiper-wrapper aspect-video">
+              <a href="#" class="swiper-slide">
+                <img src="assets/images/slide1.jpg" alt="slide1" class="w-full h-full" />
+              </a>
+              <a href="#" class="swiper-slide">
+                <img src="assets/images/slide2.jpg" alt="slide2" class="w-full h-full" />
+              </a>
+              <a href="#" class="swiper-slide">
+                <img src="assets/images/slide3.jpg" alt="slide3" class="w-full h-full" />
+              </a>
+            </div>
+          </div>
+          <!-- swiper navigation -->
+          <div class="swiper-button-next top-swiper-next "></div>
+          <div class="swiper-button-prev top-swiper-prev "></div>
+        </div>
+      </div>
+      <!-- end swiper slider -->
+      <!-- extra slides -->
+      <div class="col-span-1">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
+          <a href="#" class="overflow-hidden rounded-2xl">
+            <img src="assets/images/slide2.jpg" alt="slide2" class="w-full h-full" />
+          </a>
+          <a href="#" class="overflow-hidden aspect-video rounded-2xl">
+            <img src="assets/images/slide3.jpg" alt="slide3" class="w-full h-full" />
+          </a>
+        </div>
+      </div>
+      <!-- end extra slides -->
+    </div>
+  </main>
+  <!-- end main -->
+
+  <!-- script -->
+  <!-- swiper js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- alpine js -->
+  <script defer src="assets/js/alpinejs@3.10.3.min.js"></script>
+
+  <script>
+    // swiper setting
+    var top_swiper = new Swiper(".top-swiper", {
+      slidesPerView: 1,
+       // swiper navigation
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <!-- end script -->
+</body>
+
+</html>
