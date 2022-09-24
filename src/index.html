@@ -13,7 +13,7 @@
 <body>
   <!-- navbar -->
   <nav class="h-14 w-full bg-white border border-mate-b shadow-xl">
-    <section class="container h-full flex flex-row-reverse justify-between items-center">
+    <section class="container h-full flex-center flex-row-reverse ">
       <!-- navbar menu -->
       <div>
         <!-- hamburger -->
@@ -52,7 +52,7 @@
                   تور کوهنوردی
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-3 h-3" >
+                      stroke="currentColor" class="w-3 h-3">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                   </span></a>
@@ -97,7 +97,7 @@
               <span>تور های خارجی</span>
               <!-- chevron-down svg -->
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-4 h-4 hover-transition" x-bind:class="{'rotate-180' : openF}" >
+                stroke="currentColor" class="w-4 h-4 hover-transition" x-bind:class="{'rotate-180' : openF}">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
@@ -159,6 +159,7 @@
 
   <!-- main -->
   <main class="pt-4">
+    <!-- sliders -->
     <div class="container grid grid-cols-1 sm:grid-cols-3 gap-4">
       <!-- swiper slider -->
       <div class="relative w-full pt-md sm:col-span-2">
@@ -195,6 +196,121 @@
       </div>
       <!-- end extra slides -->
     </div>
+    <!-- end sliders -->
+
+    <!-- places to visit -->
+    <div class="container my-10">
+      <div class="grid grid-cols-1">
+        <!-- section header -->
+        <div class="flex justify-between items-end font-bold">
+          <!-- titles -->
+          <div class="flex flex-col gap-2 title-color ">
+            <h3 class="text-base font-bold">مکان های دیدنی</h3>
+            <h3 class="text-sm">تور های دیدنی</h3>
+          </div>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6 title-color">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </a>
+        </div>
+        <!-- end section header -->
+        <!-- slides per view auto -->
+       <div class="">
+        <div class="swiper places-to-visit p-4">
+          <div class="swiper-wrapper">
+            <!-- card -->
+            <div class="swiper-slide flex flex-col w-80 rounded-2xl shadow-md overflow-hidden">
+              <!-- card image -->
+              <div class="w-full relative pt-md ">
+                <img src="assets/images/1.jpg" alt="slide" class="absolute inset-0 w-full h-full">
+              </div>
+              <!-- card description -->
+              <div class="p-4 flex flex-col">
+                <h2 class="title-color text-base font-bold mb-4">جنگل آمازون</h2>
+                <h3 class="title-color text-sm font-normal mb-8">که یکی از عجایب شگفت انگیز جهان است تصویری که میبینید مربوط به جنگل آمازون میباشد</h3>
+              </div>
+              <!-- card more info -->
+              <a href="#" class="h-10 w-5/6 mx-auto mb-4 flex-center flex-row-reverse font-bold border border-mate gap-2 rounded-2xl hover:bg-purple-700 hover:text-white hover-transition">
+                <span>مشاهده عکس های بیشتر</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </a>
+            </div><div class="swiper-slide flex flex-col w-80 rounded-2xl shadow-md overflow-hidden">
+              <!-- card image -->
+              <div class="w-full relative pt-md ">
+                <img src="assets/images/2.jpg" alt="slide" class="absolute inset-0 w-full h-full">
+              </div>
+              <!-- card description -->
+              <div class="p-4 flex flex-col">
+                <h2 class="title-color text-base font-bold mb-4">جنگل آمازون</h2>
+                <h3 class="title-color text-sm font-normal mb-8">که یکی از عجایب شگفت انگیز جهان است تصویری که میبینید مربوط به جنگل آمازون میباشد</h3>
+              </div>
+              <!-- card more info -->
+              <a href="#" class="h-10 w-5/6 mx-auto mb-4 flex-center flex-row-reverse font-bold border border-mate gap-2 rounded-2xl hover:bg-purple-700 hover:text-white hover-transition">
+                <span>مشاهده عکس های بیشتر</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </a>
+            </div><div class="swiper-slide flex flex-col w-80 rounded-2xl shadow-md overflow-hidden">
+              <!-- card image -->
+              <div class="w-full relative pt-md ">
+                <img src="assets/images/3.jpg" alt="slide" class="absolute inset-0 w-full h-full">
+              </div>
+              <!-- card description -->
+              <div class="p-4 flex flex-col">
+                <h2 class="title-color text-base font-bold mb-4">جنگل آمازون</h2>
+                <h3 class="title-color text-sm font-normal mb-8">که یکی از عجایب شگفت انگیز جهان است تصویری که میبینید مربوط به جنگل آمازون میباشد</h3>
+              </div>
+              <!-- card more info -->
+              <a href="#" class="h-10 w-5/6 mx-auto mb-4 flex-center flex-row-reverse font-bold border border-mate gap-2 rounded-2xl hover:bg-purple-700 hover:text-white hover-transition">
+                <span>مشاهده عکس های بیشتر</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </a>
+            </div><div class="swiper-slide flex flex-col w-80 rounded-2xl shadow-md overflow-hidden">
+              <!-- card image -->
+              <div class="w-full relative pt-md ">
+                <img src="assets/images/4.jpg" alt="slide" class="absolute inset-0 w-full h-full">
+              </div>
+              <!-- card description -->
+              <div class="p-4 flex flex-col">
+                <h2 class="title-color text-base font-bold mb-4">جنگل آمازون</h2>
+                <h3 class="title-color text-sm font-normal mb-8">که یکی از عجایب شگفت انگیز جهان است تصویری که میبینید مربوط به جنگل آمازون میباشد</h3>
+              </div>
+              <!-- card more info -->
+              <a href="#" class="h-10 w-5/6 mx-auto mb-4 flex-center flex-row-reverse font-bold border border-mate gap-2 rounded-2xl hover:bg-purple-700 hover:text-white hover-transition">
+                <span>مشاهده عکس های بیشتر</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </a>
+            </div>
+           
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+       </div>
+        <!-- end Slides per view auto -->
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- end places to visit -->
+
+
   </main>
   <!-- end main -->
 
@@ -208,11 +324,17 @@
     // swiper setting
     var top_swiper = new Swiper(".top-swiper", {
       slidesPerView: 1,
-       // swiper navigation
+      // swiper navigation
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+    });
+
+    // Initialize Swiper
+    var swiper = new Swiper(".places-to-visit", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
     });
   </script>
   <!-- end script -->
